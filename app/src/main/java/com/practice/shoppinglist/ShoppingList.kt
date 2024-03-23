@@ -184,10 +184,16 @@ fun ShoppingListItem(item: ShoppingItem, onEditClick: () -> Unit, onDeleteClick:
         Text(text = item.name)
         Text(text = "${item.quantity}")
         IconButton(onClick = { /*TODO*/ }) {
-            Icons.Default.Edit
+            Icon(imageVector = Icons.Default.Edit, contentDescription = "Edit")
         }
         IconButton(onClick = { /*TODO*/ }) {
-            Icons.Default.Delete
+            Icon(imageVector = Icons.Default.Delete, contentDescription = "Delete")
         }
     }
 }
+@Composable
+fun EditItem(item:ShoppingItem,onEditComplete:(String,Int)->Unit){
+
+}
+
+
